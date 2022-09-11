@@ -25,7 +25,7 @@ django-admin startproject Test
 
 STRIPE_API_KEY - данный ключи можно получить, при регистрации на сайте платежной системы https://stripe.com/, с именем Secret key.
 
-Откройте файл в директории ..\minishop\static\js\key.js и замените значение ключа на своё с сайта https://stripe.com/, с именем Publishable key
+Откройте файл в директории ../minishop/static/js/key.js и замените значение ключа на своё с сайта https://stripe.com/, с именем Publishable key
 
 Выполните команды в терминале:
 
