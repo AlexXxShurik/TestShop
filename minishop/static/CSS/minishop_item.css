@@ -1,0 +1,29 @@
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/minishop.jpg);
+    margin: 0;
+    padding: 0;
+}
+
+.minishop {
+    width: 500px;
+    margin: 30px;
+    background: white;
+    padding: 50px;
+    border-radius: 15px;
+}
+
+.buy_submit {
+    margin-top: 20px;
+}
+
+.buy_submit a {
+    text-align: center;
+    padding: 5px 20px;
+    color: white;
+    background: brown;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 900;
+}

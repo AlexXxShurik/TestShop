@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block css %}{% endblock %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}">
+    <meta charset="UTF-8">
+    <title>Minishop</title>
+</head>
+<body>
+    <div class="conteiner">
+    {% block content %}{% endblock %}
+    </div>
+</body>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="{% static 'js/key.js' %}"></script>
+<script src="{% static 'js/stripe.js' %}"></script>
+</html>

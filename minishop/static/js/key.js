@@ -1,0 +1,1 @@
+Publishable_key = 'pk_test_51LgOWaFgvF7pQ28uhp91o7an4ZcMC96eIydMkklnslo2PLMWTcfVIMbNS7jnWgOwmRcyZYPjso7a5dA6rsxgSKIv00IcsPrH6f'

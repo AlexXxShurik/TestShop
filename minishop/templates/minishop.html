@@ -1,0 +1,18 @@
+{% extends 'Shop.html' %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'CSS/minishop.css'%}">
+{% endblock %}
+{% block content %}
+    {% for item in items %}
+        <div class="minishop">
+            <div class="minishop_nime">{{ item.name }}</div>
+            <div class="minishop_description">{{ item.description }}</div>
+            <hr/>
+            <div class="minishop_price">Цена: {{ item.price }} {{ item.currency.name_web }}</div>
+            <hr/>
+            <div class="buy_submit" ><a href="{% url 'minishop_item' item.pk %}">Подробнее</a></div>
+            <div onclick="buy({{ item.pk }})"  class="buy_submit" ><a href="#">Купить</a></div>
+        </div>
+    {% endfor %}
+{% endblock %}
