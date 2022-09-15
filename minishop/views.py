@@ -18,21 +18,9 @@ def MinishopItem(request, id):
 def MinishopBuy(request, id):
     itemID = Item.objects.get(pk=id)
     stripe.api_key = settings.STRIPE_API_KEY
-    product = stripe.Product.create(name=itemID.name, description=itemID.description)
-    price = stripe.Price.create(
-      unit_amount=itemID.price*100,
+    intent = stripe.PaymentIntent.create(
+      amount=itemID.price,
       currency=itemID.currency,
-      product=product,
+      payment_method_types=['card'],
     )
-    session = stripe.checkout.Session.create(
-      success_url=request.build_absolute_uri('/'),
-      cancel_url=request.build_absolute_uri('/'),
-      line_items=[
-        {
-          "price": price,
-          "quantity": 1,
-        },
-      ],
-      mode="payment",
-    )
-    return JsonResponse(session, safe=False)
+    return JsonResponse(intent, safe=False)
