@@ -31,11 +31,3 @@ class Currency(models.Model):
         verbose_name_plural = 'Валюта'
 
 
-class Order(models.Model):
-    order = models.ForeignKey(Item, related_name='items', on_delete=models.SET_NULL, null=True)
-
-    def __str__(self):
-        return '{}'.format(self.id)
-
-    def get_price(self):
-        return sum(item.price for item in self.items.all())
